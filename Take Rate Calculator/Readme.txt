@@ -1,0 +1,1 @@
+A personal project for calculating the number of clients required in a week, divided across the days using whole numbers only. 
