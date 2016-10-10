@@ -1,4 +1,5 @@
 import math
+import _tkinter
 
 #clients-per-day expectation
 CONST_EXPECT = 1.6
@@ -13,7 +14,11 @@ print "Since you can only take whole numbers of clients, here is a possible brea
 #determine remainder of clients, rounded up
 remainder = math.ceil(clientsPerDay%numShifts)
 
-#build week list, starting on Sunday --- #enum challenging in 2.7?
+#Days class for enum
+class Days:
+    Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday = range(1,8)
+
+#build week list, starting on Sunday
 weekList = []
 for count in range(0, 7):
     weekList.insert(count, math.floor(clientsPerDay))
